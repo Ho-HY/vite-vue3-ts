@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Noto Sans TC';
+  src: local('Noto Sans TC'), url(@assets/fonts/NotoSansTC-Regular.otf) format('opentype');
+  /*  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap');' */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#app {
+  width: 100%;
+  overflow: auto;
+  font-family: 'Noto Sans TC', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
