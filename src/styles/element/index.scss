@@ -1,0 +1,42 @@
+$--colors: (
+  'primary': ('base': #757cf1),
+  'success': ('base': #44AC55),
+  'warning': ('base': #FFC645),
+  'danger': ('base': #DF4D5F),
+  'error': ('base': #db2828),
+  'info': ('base': #94A7AE),
+  //94A7AE'31A7BC'39A8BA
+);
+
+//background-colors
+$--bg-colors: (
+  '': #F4F2F3,
+);
+
+$--text-colors: (
+  'primary': #555555,
+);
+
+$--border-color: (
+  'base': #dcdfe6,
+);
+
+@forward 'element-plus/theme-chalk/src/common/var.scss' with ( // do not use same name, it will override.
+  $colors: $--colors,
+  $text-color: $--text-colors,
+  $bg-color: $--bg-colors,
+  $menu: ('border-color': var(--el-color-warning-light-8)),
+  $sm: 500px,
+  $md: 768px,
+  $lg: 1200px,
+  $xl: 1920px,
+  //
+);
+
+@import './theme.scss';
+
+// import all
+// @use'element-plus/theme-chalk/src/index.scss' as *;
+
+// import dark theme
+// @use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
