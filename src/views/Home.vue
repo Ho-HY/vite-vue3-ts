@@ -8,6 +8,8 @@
         <img src="@assets/vue.svg" class="logo vue" alt="Vue logo" />
       </a>
     </div>
+    <HelloWorld msg="Hello Vue 3.0 + Element Plus + Vite" />
+    <HelloElement msg="Hello Vue 3.0 + Element Plus " />
   </div>
 </template>
 
