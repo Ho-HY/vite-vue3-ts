@@ -4,8 +4,10 @@ import { ElMessage } from 'element-plus'
 
 defineProps<{ msg: string }>()
 const count = ref(0)
+const inputcount = ref(0)
 const input = ref('element-plus')
 const input1 = ref('element-plus1234')
+const input2 = ref('')
 const input3 = ref('')
 const curDate = ref('')
 const curDate1 = ref('')
@@ -32,10 +34,14 @@ const toast = () => {
   <el-button type="danger" @click="count++">count is: {{ count }}</el-button>
   <el-button type="info" @click="count++">count is: {{ count }}</el-button>
   <br />
-  <el-input v-model="input" style="width: 200px; margin: 20px" />
-  <el-input v-model="input1" readonly style="width: 200px; margin: 20px" />
-  <el-input v-model="input1" style="width: 200px; margin: 20px" />
-  <el-input v-model="input1" disabled style="width: 200px; margin: 20px" />
+  <elPlus-input v-model="input" style="width: 200px; margin: 20px" />
+  <elPlus-input v-model="input1" readonly style="width: 200px; margin: 20px" />
+  <elPlus-input v-model="inputcount" style="width: 200px; margin: 20px">
+    <template #append>
+      <el-button icon="Search" @click="inputcount++" />
+    </template>
+  </elPlus-input>
+  <elPlus-input v-model="input1" disabled style="width: 200px; margin: 20px" />
   <el-tag>資料、訊息 1</el-tag>
 
   <el-form label-width="150px">
